@@ -23,6 +23,9 @@ public Hook(BaseUtil baseUtil){
         if (scenario.isFailed()){
             System.out.println("screenshot");
         }
-        driver.close();
+        if (driver != null) {
+            System.out.println("driver not equal to zero");
+            driver.quit();
+        }
     }
 }
